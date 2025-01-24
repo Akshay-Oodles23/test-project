@@ -1,4 +1,4 @@
-import { Post as PostType } from "../types/types";
+import { Post as PostType } from "../../types/types";
 import CommentList from "./CommentList";
 
 

@@ -1,5 +1,5 @@
 import Post from "./Post";
-import { Post as PostType } from "../types/types";
+import { Post as PostType } from "../../types/types";
 
 interface Props {
     posts: PostType[];
