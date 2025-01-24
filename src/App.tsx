@@ -1,13 +1,29 @@
-import './App.css'
+import PostForm from "./components/PostForm";
+import PostList from "./components/PostList";
+import { Post } from "./types/types";
+import { useLocalStorage } from "./hooks/useLocalStorage";
+import { addComment, addPost, addReply } from "./state/Posts";
 
-function App() {
+export default function App() {
+  const [posts, setPosts] = useLocalStorage<Post[]>("posts", []);
 
+  const handleAddPost = (title: string, content: string) => {
+    setPosts((prevPosts) => addPost(prevPosts, title, content));
+  };
+
+  const handleAddComment = (postId: string, content: string) => {
+    setPosts((prevPosts) => addComment(prevPosts, postId, content));
+  };
+
+  const handleReply = (postId: string, commentId: string, content: string) => {
+    setPosts((prevPosts) => addReply(prevPosts, postId, commentId, content));
+  };
 
   return (
-    <>
-      <h1 className='text-7xl text-center'>Hello vite with typescript</h1>
-    </>
-  )
+    <div className="container mx-auto p-4">
+      <h1 className="text-3xl font-bold mb-4">Community Connect</h1>
+      <PostForm onAddPost={handleAddPost} />
+      <PostList posts={posts} onAddComment={handleAddComment} onReply={handleReply} />
+    </div>
+  );
 }
-
-export default App
