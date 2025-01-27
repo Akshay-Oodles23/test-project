@@ -8,7 +8,7 @@ export const addPost = (posts: Post[], title: string, content: string): Post[] =
         content,
         comments: [],
     };
-    return [...posts, newPost];
+    return [newPost, ...posts ];
 };
 
 export const addComment = (

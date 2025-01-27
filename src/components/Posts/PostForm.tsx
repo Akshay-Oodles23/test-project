@@ -56,7 +56,7 @@ export default function PostForm({ onAddPost }: Props) {
 					/>
 					<button
 						type='submit'
-						className='bg-[#111518] text-white px-3 sm:px-4 py-1 rounded-lg h-9 text-xs font-semibold sm:text-sm flex place-self-end items-center mt-1'
+						className='bg-[#111518] cursor-pointer text-white px-3 sm:px-4 py-1 rounded-lg h-9 text-xs font-semibold sm:text-sm flex place-self-end items-center mt-1'
 					>
 						Tweet
 					</button>

@@ -8,37 +8,19 @@ interface Props {
 }
 
 export default function PostList({ posts, onAddComment, onReply }: Props) {
-    
-
-    // Placeholder post to display when the list is empty
-    const placeholderPost: PostType = {
-        id: "placeholder",
-        title: "No Posts Yet",
-        content: "Be the first to create a post and engage with the community!",
-        comments: [],
-        hashtag: ["community", "welcome"],
-        reactions: { likes: "0", comments: "0", shares: "0" },
-    };
-
+    // console.log(posts)
     return (
         <div>
-            {posts.length > 0 ? (
-                posts.map((post) => (
-                    <Post
-                        key={post.id}
-                        post={post}
-                        onAddComment={onAddComment}
-                        onReply={onReply}
-                    />
-                ))
-            ) : (
+            {posts.map((post) => (
                 <Post
-                    key={placeholderPost.id}
-                    post={placeholderPost}
-                    onAddComment={() => console.log("Placeholder comment")}
-                    onReply={() => console.log("Placeholder reply")}
+                    key={post.id}
+                    post={post}
+                    onAddComment={onAddComment}
+                    onReply={onReply}
                 />
-            )}
+            ))}
+            <div className="pb-32">
+            </div>
         </div>
     );
 }
