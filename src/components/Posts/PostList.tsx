@@ -8,7 +8,7 @@ interface Props {
 }
 
 export default function PostList({ posts, onAddComment, onReply }: Props) {
-    console.log("[PostList] Posts:", posts);
+    
 
     // Placeholder post to display when the list is empty
     const placeholderPost: PostType = {

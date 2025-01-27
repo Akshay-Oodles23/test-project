@@ -19,7 +19,7 @@ export default function Post({ post, onAddComment, onReply }: Props) {
 	const [currentDateTime, setCurrentDateTime] = useState("");
 	const [initialPosts, setInitialPosts] = useState<PostType[]>([]);
 
-	console.log(onReply)
+
 
 	useEffect(() => {
 		async function fetchPreloadedPosts() {
@@ -52,7 +52,7 @@ export default function Post({ post, onAddComment, onReply }: Props) {
 		setCurrentDateTime(formattedDateTime);
 	}, []);
 
-	console.log(initialPosts)
+	
 
 	// Helper function to render individual posts
 	const renderPost = (postData: PostType) => (
@@ -153,7 +153,7 @@ export default function Post({ post, onAddComment, onReply }: Props) {
 			</form>
 		</div>
 	);
-	console.log("hello")
+	
 
 
 	return (

@@ -24,7 +24,7 @@ export default function CreatePost() {
 			addReply(prevPosts, postId, commentId, content)
 		);
 	};
-	console.log("current post")
+	
 
 	return (
 		<div className='container mx-auto px-2 sm:px-10 sm:py-4'>
