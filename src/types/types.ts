@@ -3,8 +3,8 @@ export interface Post {
     title: string;
     content: string;
     comments: Comment[];
-    hashtag: string[];
-    reactions: {
+    hashtag?: string[];
+    reactions?: {
         likes: string,
         comments: string,
         shares: string
