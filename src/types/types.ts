@@ -1,10 +1,17 @@
 export interface Post {
-    [x: string]: any;
     id: string;
     title: string;
     content: string;
-    comments: Comment[]
+    comments: Comment[];
+    hashtag: string[];
+    reactions: {
+        likes: string,
+        comments: string,
+        shares: string
+    }
+    [key: string]: unknown;
 }
+
 
 export interface Comment {
     id: string;

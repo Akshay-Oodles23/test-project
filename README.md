@@ -1,50 +1,127 @@
-# React + TypeScript + Vite
+Community Connect Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A Community Connect Frontend application built with modern web technologies to allow users to create posts, comment on posts, and reply with nested comments. This project showcases a dynamic, interactive frontend for a community platform.
 
-Currently, two official plugins are available:
+Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Create Posts: Users can write and share posts on the community platform.
 
-## Expanding the ESLint configuration
+Comment on Posts: Add comments to any post to engage in discussions.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Nested Comments: Reply to specific comments, supporting threaded/nested discussions.
 
-- Configure the top-level `parserOptions` property like this:
+Preloaded Posts: The page is populated with initial posts fetched from the DummyJSON API, giving the application a realistic feel.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Responsive Design: Built with TailwindCSS to ensure a seamless experience across all devices.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Tech Stack
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Vite: A fast and modern build tool for frontend development.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+TypeScript: For type safety and improved developer experience.
+
+TailwindCSS: For utility-first, customizable styling.
+
+DummyJSON API: To preload initial posts for a realistic populated page.
+
+Getting Started
+
+Prerequisites
+
+Make sure you have the following installed on your machine:
+
+Node.js (LTS version recommended)
+
+npm (comes with Node.js)
+
+Installation
+
+Clone the repository:
+
+git clone <repository-url>
+
+Navigate to the project directory:
+
+cd community-connect-frontend
+
+Install dependencies:
+
+npm install
+
+Run the Application
+
+Start the development server:
+
+npm run dev
+
+The application will be available at http://localhost:3000 (default Vite port).
+
+Usage
+
+Preloaded Posts: Upon loading the app, you will see a few preloaded posts fetched from the DummyJSON API.
+
+Creating Posts: Use the form to create and publish a new post.
+
+Commenting: Add comments to posts and engage in discussions.
+
+Replying to Comments: Click reply on a comment to add nested comments, supporting threaded conversations.
+
+File Structure
+
+community-connect-frontend/
+├── src/
+│ ├── components/ # React components (Post, PostList, PostForm, etc.)
+│ ├── hooks/ # Custom hooks (e.g., useLocalStorage)
+│ ├── state/ # State management helpers (e.g., functions to handle posts/comments)
+│ ├── types/ # TypeScript type definitions
+│ ├── App.tsx # Main application file
+│ └── index.tsx # Entry point
+├── public/ # Static assets
+├── tailwind.config.js # TailwindCSS configuration
+├── tsconfig.json # TypeScript configuration
+├── vite.config.ts # Vite configuration
+└── package.json # Project metadata and dependencies
+
+Dependencies
+
+Key dependencies used in this project:
+
+react & react-dom: For building the user interface.
+
+vite: For fast development and bundling.
+
+tailwindcss: For styling.
+
+typescript: For type safety.
+
+Contribution
+
+Contributions are welcome! If you'd like to contribute:
+
+Fork the repository.
+
+Create a new branch for your feature or bug fix:
+
+git checkout -b feature-name
+
+Commit your changes:
+
+git commit -m "Description of changes"
+
+Push your branch and create a pull request.
+
+License
+
+This project is licensed under the MIT License. Feel free to use, modify, and distribute it as per the license.
+
+Acknowledgments
+
+DummyJSON API for providing fake data for initial posts.
+
+Vite for the fast build and development experience.
+
+TailwindCSS for easy and responsive styling.
+
+Author
+
+Your Name - GitHub Profile

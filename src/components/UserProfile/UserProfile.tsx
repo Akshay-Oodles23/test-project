@@ -1,9 +1,5 @@
-
-
 const UserProfile = () => {
-    return (
-        <div className="w-2/6 bg-gray-100 "></div>
-    )
-}
+	return <div className='w-2/6'></div>;
+};
 
-export default UserProfile
+export default UserProfile;

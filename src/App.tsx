@@ -1,11 +1,14 @@
-import Home from './components/Home/Home'
+import Home from "./components/Home/Home";
+import Layout from "./components/Layout/Layout";
 
 const App = () => {
-  return (
-    <div>
-      <Home />
-    </div>
-  )
-}
+	return (
+		<div>
+			<Layout>
+				<Home />
+			</Layout>
+		</div>
+	);
+};
 
-export default App
+export default App;

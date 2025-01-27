@@ -1,28 +1,26 @@
 import CreatePost from "../CreatePost/CreatePost";
-import Navbar from "../Navbar/Navbar";
+import News from "../News/News";
 import UserProfile from "../UserProfile/UserProfile";
 
 const Home = () => {
-    return (
-        <div className="flex flex-col h-screen bg-[#F3F3F7]">
-            {/* Navbar */}
-            <Navbar />
+	return (
+		<div className='pt-16 flex h-screen'>
+			{/* Left Sidebar */}
+			<div className='hidden md:w-1/6 lg:w-[10%] p-4 fixed h-screen'>
+				<UserProfile />
+			</div>
 
-            {/* Main Content */}
-            <div className="flex flex-grow">
-                {/* Left Sidebar */}
-                <UserProfile />
-                {/* Center Content */}
-                <div className="w-3/6 ">
-                    <CreatePost />
-                </div>
+			{/* Center Content */}
+			<div className='w-full md:w-[80%] lg:w-[70%] xl:w-1/2  mx-auto bg-[#FAFAFA] min-h-screen overflow-y-auto relative'>
+				<CreatePost />
+			</div>
 
-                {/* Right Sidebar */}
-                <div className="w-2/6 "></div>
-            </div>
-        </div>
-
-    );
+			{/* Right Sidebar */}
+			<div className='hidden md:w-1/6  lg:w-[10%]  p-4 fixed right-0 h-screen'>
+				<News />
+			</div>
+		</div>
+	);
 };
 
 export default Home;
